@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Calculator</title>
+    <title>Subtraction Example</title>
 </head>
 <body>
 
-  <input type="text" id="num1" placeholder="Enter first number">
-  <input type="text" id="num2" placeholder="Enter second number">
-  <button onclick="addNumbers()">Add</button>
+    <h2>Subtraction Calculator</h2>
 
-  <p id="result"></p>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
 
-  <script>
-    function addNumbers() {
-      const a = document.getElementById("num1").value;
-      const b = document.getElementById("num2").value;
+    <br><br>
 
-      if (a === "" || b === "") {
-        document.getElementById("result").innerText = "Error: Please enter both numbers.";
-        return;
-      }
+    <button onclick="subtract()">Subtract</button>
 
-      const num1 = Number(a);
-      const num2 = Number(b);
+    <h3 id="result"></h3>
 
-      if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById("result").innerText = "Error: Invalid input.";
-        return;
-      }
+    <script>
+        function subtract() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
 
-      document.getElementById("result").innerText = "Result: " + (num1 + num2);
-    }
-  </script>
+            let result = a - b;
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
 
 </body>
 </html>
